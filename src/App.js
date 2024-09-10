@@ -22,7 +22,7 @@ function App() {
     <div className="mt-4 pl-8">
       <h2 className="font-sans text-4xl mt-4">Gym Locker Reservation</h2>
       <button
-        className="mt-4 px-5 bg-teal-700 rounded-lg text-slate-100"
+        className="mt-4 px-5 bg-teal-700 rounded-lg text-slate-100 ml-10"
         onClick={reserveLocker}
       >
         Reserve Locker
@@ -31,7 +31,7 @@ function App() {
       {lockers.map((locker, index) => (
         <button
           key={index}
-          className={`locker ${locker.status}  rounded-lg p-4 border border-gray-600 border-opacity-100`}
+          className={`locker ${locker.status}  rounded-lg p-8 border border-gray-600 border-opacity-100 ml-10`}
           disabled={locker.status === "taken"}
           style={{ backgroundColor: locker.color, paddingBottom: "15%" }}
           onClick={locker.status === "free" ? reserveLocker : null}
